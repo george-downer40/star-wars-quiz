@@ -9,3 +9,5 @@ let questions = [
         ]
     }
 ];
+
+let questionBox = document.getElementById('question-box');
