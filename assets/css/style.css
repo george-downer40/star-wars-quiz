@@ -27,11 +27,21 @@ h1 {
 }
 
 .answer-box {
-    color: aquamarine;
+    background-color: aquamarine;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
 
 }
 
 #question-box {
     text-align: center;
     background-color: blueviolet;
+}
+
+#answer-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
