@@ -1,9 +1,13 @@
 body {
-    background-color: blue;
-    display: flexbox;
-    align-items: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
-}
+    align-items: center;
+    background-color: blue;
+  }
 
 h1 {
     font-size: 300%;
@@ -12,14 +16,17 @@ h1 {
 
 .quiz-box {
     background-color: red;
-    width: 1400px;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
     max-width: 80%;
     border-radius: 20px;
     padding: 20px;
 }
 
 .answer-box {
-    
+
 }
 
 #question-box {
