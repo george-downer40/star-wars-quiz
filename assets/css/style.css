@@ -12,6 +12,7 @@ body {
 h1 {
     font-size: 300%;
     text-align: center;
+    justify-content: center;
 }
 
 .quiz-box {
@@ -26,9 +27,11 @@ h1 {
 }
 
 .answer-box {
+    color: aquamarine;
 
 }
 
 #question-box {
     text-align: center;
+    background-color: blueviolet;
 }
