@@ -62,9 +62,9 @@ function startGame() {
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score);
+       // localStorage.setItem('mostRecentScore', score);
 
-        return window.location.assign('/end.html');
+        return showResults();
     }
 
     questionCounter++
@@ -105,13 +105,24 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
-        }, 100)
+        }, 10)
     })
 })
 
 function incrementScore(num) {
     score +=num
     scoreText.innerText = score
+}
+
+function showResults () {
+    gameContainer.classList.add('hide');
+    restartButton.classList.remove('hide');
+    restartButton.addEventListener('click', showStart);
+}
+
+function showStart() {
+    startButton.classList.remove('hide');
+    restartButton.classList.add('hide');
 }
 
 //startGame()
