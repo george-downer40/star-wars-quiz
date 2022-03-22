@@ -5,8 +5,11 @@ let choices = Array.from(document.querySelectorAll('.choice-text'));
 let progressText = document.getElementById('progressText');
 let scoreText = document.getElementById('score');
 let progressBarFull = document.getElementById('progressBarFull');
+
+
 let startButton = document.getElementById('start-btn');
 let restartButton =document.getElementById('restart-btn');
+let gameContainer = document.getElementById('game');
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -46,7 +49,11 @@ let questions = [
 let POINTS_GAIN = 100;
 let MAX_QUESTIONS = 3;
 
+startButton.addEventListener('click', startGame);
+
 function startGame() {
+    startButton.classList.add('hide');
+    gameContainer.classList.remove('hide');
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
@@ -98,7 +105,7 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
-        }, 1000)
+        }, 100)
     })
 })
 
@@ -107,7 +114,7 @@ function incrementScore(num) {
     scoreText.innerText = score
 }
 
-startGame()
+//startGame()
 
 
 
