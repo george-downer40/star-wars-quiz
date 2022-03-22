@@ -5,6 +5,8 @@ let choices = Array.from(document.querySelectorAll('.choice-text'));
 let progressText = document.getElementById('progressText');
 let scoreText = document.getElementById('score');
 let progressBarFull = document.getElementById('progressBarFull');
+let startButton = document.getElementById('start-btn');
+let restartButton =document.getElementById('restart-btn');
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -81,8 +83,8 @@ choices.forEach(choice => {
         if(!acceptingAnswers) return
 
         acceptingAnswers = false
-        const selectedChoice = event.target
-        const selectedAnswer = selectedChoice.dataset['number']
+        let selectedChoice = event.target
+        let selectedAnswer = selectedChoice.dataset['number']
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
