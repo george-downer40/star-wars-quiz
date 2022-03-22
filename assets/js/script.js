@@ -13,7 +13,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 
-
+// Question array
 let questions = [
     {
         question: 'Who destroyed the first Death Star?',
@@ -99,6 +99,7 @@ choices.forEach(choice => {
         }, 1000)
     })
 })
+
 function incrementScore(num) {
     score +=num
     scoreText.innerText = score
