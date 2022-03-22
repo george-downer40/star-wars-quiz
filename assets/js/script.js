@@ -120,7 +120,9 @@ function showResults () {
     restartButton.classList.remove('hide');
     restartButton.addEventListener('click', restartQuiz);
 }
-
+/**
+ * reset user's score to 0 when game is restarted
+ */
 function resetScore() {
     score = 0;
     scoreText.innerText = 0;
