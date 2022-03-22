@@ -9,39 +9,14 @@ body {
     background-color: blue;
   }
 
-h1 {
-    font-size: 300%;
-    text-align: center;
-    justify-content: center;
+.hud-item {
+
 }
 
-.quiz-box {
+.choice-container {
     background-color: red;
-    display: flexbox;
-    align-items: center;
-    justify-content: center;
-    width: 700px;
-    max-width: 80%;
-    border-radius: 20px;
-    padding: 20px;
 }
 
-.answer-box {
-    background-color: aquamarine;
-    align-items: center;
-    justify-content: center;
-    margin: 2%;
-
-}
-
-#question-box {
-    text-align: center;
-    background-color: blueviolet;
-}
-
-#answer-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.choice-text {
+    color: azure;
 }
