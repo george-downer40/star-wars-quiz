@@ -6,6 +6,13 @@ let progressText = document.getElementById('progressText');
 let scoreText = document.getElementById('score');
 let progressBarFull = document.getElementById('progressBarFull');
 
+let currentQuestion = {};
+let acceptingAnswers = true;
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
+
+
 
 let questions = [
     {
