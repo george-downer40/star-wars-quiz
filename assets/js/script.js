@@ -49,7 +49,7 @@ function startGame() {
     score = 0;
     availableQuestions = [...questions];
     getNewQuestion()
-}
+};
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
@@ -77,11 +77,11 @@ function getNewQuestion() {
 }
 
 choices.forEach(choice => {
-    choice.addEventListener('click', e => {
+    choice.addEventListener('click', event => {
         if(!acceptingAnswers) return
 
         acceptingAnswers = false
-        const selectedChoice = e.target
+        const selectedChoice = event.target
         const selectedAnswer = selectedChoice.dataset['number']
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
@@ -99,8 +99,7 @@ choices.forEach(choice => {
         }, 1000)
     })
 })
-
-incrementScore = num => {
+function incrementScore(num) {
     score +=num
     scoreText.innerText = score
 }
