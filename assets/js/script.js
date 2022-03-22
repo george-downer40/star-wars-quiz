@@ -41,9 +41,15 @@ let questions = [
     },
 ];
 
-let questionBox = document.getElementById('question-box');
+let POINTS_GAIN = 100;
+let MAX_QUESTIONS = 3;
 
-function displayQuestion(questions) {
-    console.log('working?');
+function startGame() {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    getNewQuestion()
 }
+
+
     
