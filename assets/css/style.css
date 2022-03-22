@@ -33,6 +33,7 @@ body {
 
 .choice-container {
     background-color: rgb(0, 247, 255);
+    font-family: 'Orbitron', sans-serif;
 }
 
 .choice-text {
@@ -43,4 +44,8 @@ body {
 
 .hide {
     display: none;
+}
+
+#question {
+    font-family: 'Orbitron', sans-serif;
 }
