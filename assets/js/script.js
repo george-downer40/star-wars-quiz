@@ -64,6 +64,7 @@ function getNewQuestion() {
 
         return showResults();
     }
+
     //iterates question counter by 1. 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
@@ -102,6 +103,7 @@ for (let choice of choices) {
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
+
         //delays the next question
         setTimeout( function() {
             selectedChoice.parentElement.classList.remove(classToApply)
@@ -122,6 +124,7 @@ function showResults () {
     gameContainer.classList.add('hide');
     restartButton.classList.remove('hide');
     restartButton.addEventListener('click', restartQuiz);
+    console.log(score);
 }
 /**
  * reset user's score to 0 when game is restarted
@@ -138,6 +141,8 @@ function restartQuiz() {
     restartButton.classList.add('hide');
     resetScore();
 }
+
+
 
 
 
