@@ -4,8 +4,6 @@ let question = document.getElementById('question');
 let choices = Array.from(document.querySelectorAll('.choice-text'));
 let progressText = document.getElementById('progressText');
 let scoreText = document.getElementById('score');
- // let progressBarFull = document.getElementById('progressBarFull');
-
 
 let startButton = document.getElementById('start-btn');
 let restartButton =document.getElementById('restart-btn');
@@ -68,24 +66,28 @@ function getNewQuestion() {
 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    // progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
     
+    // randomizes questions
     let questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
 
-    choices.forEach(choice => {
+   //loops through choices array to show question
+    for (let choice of choices) {
         let number = choice.dataset['number']
         choice.innerText = currentQuestion['choice' + number]
-    })
+    }
+
 //removes used questions
     availableQuestions.splice(questionsIndex, 1);
 
     acceptingAnswers = true;
 }
 
-choices.forEach(choice => {
-    choice.addEventListener('click', event => {
+
+
+for (let choice of choices) {
+    choice.addEventListener('click', function(event) {
         if(!acceptingAnswers) return
 
         acceptingAnswers = false
@@ -106,7 +108,7 @@ choices.forEach(choice => {
 
         }, 500)
     })
-})
+}  
 
 function incrementScore(num) {
     score +=num
