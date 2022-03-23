@@ -49,6 +49,7 @@ let MAX_QUESTIONS = 3;
 
 startButton.addEventListener('click', startGame);
 
+//hides the start button and shows quiz
 function startGame() {
     startButton.classList.add('hide');
     gameContainer.classList.remove('hide');
@@ -63,7 +64,7 @@ function getNewQuestion() {
 
         return showResults();
     }
-
+    //iterates question counter by 1. 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     
@@ -85,7 +86,7 @@ function getNewQuestion() {
 }
 
 
-
+//loops through choices array and if correct, increase points by 100
 for (let choice of choices) {
     choice.addEventListener('click', function(event) {
         if(!acceptingAnswers) return
@@ -101,8 +102,8 @@ for (let choice of choices) {
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
-
-        setTimeout(() => {
+        //delays the next question
+        setTimeout( function() {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
