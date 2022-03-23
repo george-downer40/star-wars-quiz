@@ -1,10 +1,10 @@
 console.log('working?');
 
-let choices = Array.from(document.querySelectorAll('.choice-text'));
 const START_BUTTON = document.getElementById('start-btn');
 const RESTART_BUTTON =document.getElementById('restart-btn');
 const GAME_CONTAINER = document.getElementById('game');
 const MAX_QUESTIONS = 3;
+const CHOICES = document.querySelectorAll('.choice-text');
 
 
 let currentQuestion = {};
@@ -12,6 +12,7 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+
 
 
 // Question array
@@ -73,7 +74,7 @@ function getNewQuestion() {
     QUESTION.innerText = currentQuestion.question
 
    //loops through choices array to show question
-    for (let choice of choices) {
+    for (let choice of CHOICES) {
         let number = choice.dataset['number']
         choice.innerText = currentQuestion['choice' + number]
     }
@@ -86,7 +87,7 @@ function getNewQuestion() {
 
 
 //loops through choices array and if correct, increase points by 100
-for (let choice of choices) {
+for (let choice of CHOICES) {
     choice.addEventListener('click', function(event) {
         if(!acceptingAnswers) return
 
@@ -97,7 +98,7 @@ for (let choice of choices) {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
         if(classToApply === 'correct') {
-            let POINTS_GAIN = 100;
+            const POINTS_GAIN = 100;
             incrementScore(POINTS_GAIN)
         }
 
@@ -105,7 +106,7 @@ for (let choice of choices) {
 
         //delays the next question
         setTimeout( function() {
-            selectedChoice.parentElement.classList.remove(classToApply)
+            // selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
         }, 500)
