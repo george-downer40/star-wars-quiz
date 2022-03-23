@@ -1,3 +1,6 @@
+window.addEventListener('load', restartQuiz);
+
+
 const START_BUTTON = document.getElementById('start-btn');
 const RESTART_BUTTON =document.getElementById('restart-btn');
 const GAME_CONTAINER = document.getElementById('game');
