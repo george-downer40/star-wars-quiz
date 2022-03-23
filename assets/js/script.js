@@ -1,10 +1,10 @@
 console.log('working?');
 
 let choices = Array.from(document.querySelectorAll('.choice-text'));
-let startButton = document.getElementById('start-btn');
-let restartButton =document.getElementById('restart-btn');
-let gameContainer = document.getElementById('game');
-let MAX_QUESTIONS = 3;
+const START_BUTTON = document.getElementById('start-btn');
+const RESTART_BUTTON =document.getElementById('restart-btn');
+const GAME_CONTAINER = document.getElementById('game');
+const MAX_QUESTIONS = 3;
 
 
 let currentQuestion = {};
@@ -43,12 +43,12 @@ let questions = [
 ];
 
 
-startButton.addEventListener('click', startGame);
+START_BUTTON.addEventListener('click', startGame);
 
 //hides the start button and shows quiz
 function startGame() {
-    startButton.classList.add('hide');
-    gameContainer.classList.remove('hide');
+    START_BUTTON.classList.add('hide');
+    GAME_CONTAINER.classList.remove('hide');
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
@@ -121,9 +121,9 @@ function incrementScore(num) {
  * hides quiz and takes user to results page
  */
 function showResults () {
-    gameContainer.classList.add('hide');
-    restartButton.classList.remove('hide');
-    restartButton.addEventListener('click', restartQuiz);
+    GAME_CONTAINER.classList.add('hide');
+    RESTART_BUTTON.classList.remove('hide');
+    RESTART_BUTTON.addEventListener('click', restartQuiz);
     console.log(score);
 }
 /**
@@ -138,8 +138,8 @@ function resetScore() {
  * takes user back to beginning of quiz
  */
 function restartQuiz() {
-    startButton.classList.remove('hide');
-    restartButton.classList.add('hide');
+    START_BUTTON.classList.remove('hide');
+    RESTART_BUTTON.classList.add('hide');
     resetScore();
 }
 
