@@ -88,30 +88,33 @@ function getNewQuestion() {
 
 //loops through choices array and if correct, increase points by 100
 for (let choice of CHOICES) {
-    choice.addEventListener('click', function(event) {
-        if(!acceptingAnswers) return
+    choice.addEventListener('click', checkAnswer)
+}
 
-        acceptingAnswers = false
-        let selectedChoice = event.target
-        let selectedAnswer = selectedChoice.dataset['number']
+function checkAnswer(event) {
+    if(!acceptingAnswers) return
 
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+    acceptingAnswers = false
+    let selectedChoice = event.target
+    let selectedAnswer = selectedChoice.dataset['number']
 
-        if(classToApply === 'correct') {
-            const POINTS_GAIN = 100;
-            incrementScore(POINTS_GAIN)
-        }
+    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
-        selectedChoice.parentElement.classList.add(classToApply)
+    if(classToApply === 'correct') {
+        const POINTS_GAIN = 100;
+        incrementScore(POINTS_GAIN)
+    }
 
-        //delays the next question
-        setTimeout( function() {
-            // selectedChoice.parentElement.classList.remove(classToApply)
-            getNewQuestion()
+    selectedChoice.parentElement.classList.add(classToApply)
 
-        }, 500)
-    })
-}  
+    //delays the next question
+    setTimeout( function() {
+        // selectedChoice.parentElement.classList.remove(classToApply)
+        getNewQuestion()
+
+    }, 500)
+
+}
 
 function incrementScore(num) {
     let scoreText = document.getElementById('score');
