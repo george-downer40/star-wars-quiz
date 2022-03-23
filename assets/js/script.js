@@ -46,7 +46,9 @@ let questions = [
 
 START_BUTTON.addEventListener('click', startGame);
 
-//hides the start button and shows quiz
+/**
+ * hides the initial start button and shows the quiz
+ */
 function startGame() {
     START_BUTTON.classList.add('hide');
     GAME_CONTAINER.classList.remove('hide');
@@ -56,6 +58,10 @@ function startGame() {
     getNewQuestion()
 };
 
+/**
+ * shows the question and runs showResults function once all questions have
+ * been looped through
+ */
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
 
@@ -91,6 +97,9 @@ for (let choice of CHOICES) {
     choice.addEventListener('click', checkAnswer)
 }
 
+/**
+ * checks if the answer is correct and applies the class correct or incorrect based on result
+ */
 function checkAnswer(event) {
     if(!acceptingAnswers) return
 
@@ -109,18 +118,22 @@ function checkAnswer(event) {
 
     //delays the next question
     setTimeout( function() {
-        // selectedChoice.parentElement.classList.remove(classToApply)
+        selectedChoice.parentElement.classList.remove(classToApply)
         getNewQuestion()
 
     }, 500)
 
 }
 
+/**
+ * increases score by 100 when called / correct answer selected
+ */
 function incrementScore(num) {
     let scoreText = document.getElementById('score');
     score +=num
     scoreText.innerText = score
 }
+
 /**
  * hides quiz and takes user to results page
  */
@@ -130,6 +143,7 @@ function showResults () {
     RESTART_BUTTON.addEventListener('click', restartQuiz);
     console.log(score);
 }
+
 /**
  * reset user's score to 0 when game is restarted
  */
@@ -138,6 +152,7 @@ function resetScore() {
     score = 0;
     scoreText.innerText = 0;
 }
+
 /**
  * takes user back to beginning of quiz
  */
