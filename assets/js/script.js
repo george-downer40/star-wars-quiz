@@ -1,5 +1,3 @@
-console.log('working?');
-
 const START_BUTTON = document.getElementById('start-btn');
 const RESTART_BUTTON =document.getElementById('restart-btn');
 const GAME_CONTAINER = document.getElementById('game');
@@ -160,6 +158,7 @@ function restartQuiz() {
     START_BUTTON.classList.remove('hide');
     RESTART_BUTTON.classList.add('hide');
     resetScore();
+    console.log('test');
 }
 
 
