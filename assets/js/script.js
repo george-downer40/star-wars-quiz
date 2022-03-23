@@ -4,7 +4,7 @@ let question = document.getElementById('question');
 let choices = Array.from(document.querySelectorAll('.choice-text'));
 let progressText = document.getElementById('progressText');
 let scoreText = document.getElementById('score');
-let progressBarFull = document.getElementById('progressBarFull');
+ // let progressBarFull = document.getElementById('progressBarFull');
 
 
 let startButton = document.getElementById('start-btn');
@@ -31,7 +31,7 @@ let questions = [
     {
         question: 'Who dueled Darth Sidious in the Senate on Coruscant?',
         choice1: 'Wrong',
-        choice2: 'Yoda',
+        choice2: 'Yodaaaaaa',
         choice3: 'Wrong',
         choice4: 'Wrong',
         answer: 2,
@@ -40,7 +40,7 @@ let questions = [
         question: 'Who was the apprentice of Qui-Gon Jinn?',
         choice1: 'Wrong',
         choice2: 'Wrong',
-        choice3: 'Obi-Wan Kenobi',
+        choice3: 'Obi-Wan Kenooooobi',
         choice4: 'Wrong',
         answer: 3,
     },
@@ -68,7 +68,7 @@ function getNewQuestion() {
 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    // progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
     
     let questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
