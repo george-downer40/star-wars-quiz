@@ -1,13 +1,11 @@
 console.log('working?');
 
-let question = document.getElementById('question');
 let choices = Array.from(document.querySelectorAll('.choice-text'));
-let progressText = document.getElementById('progressText');
-let scoreText = document.getElementById('score');
-
 let startButton = document.getElementById('start-btn');
 let restartButton =document.getElementById('restart-btn');
 let gameContainer = document.getElementById('game');
+let MAX_QUESTIONS = 3;
+
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -36,7 +34,7 @@ let questions = [
     },
     {
         question: 'Who was the apprentice of Qui-Gon Jinn?',
-        choice1: 'Wrong',
+        choice1: 'WroSSSSng',
         choice2: 'Wrong',
         choice3: 'Obi-Wan Kenooooobi',
         choice4: 'Wrong',
@@ -44,8 +42,6 @@ let questions = [
     },
 ];
 
-let POINTS_GAIN = 100;
-let MAX_QUESTIONS = 3;
 
 startButton.addEventListener('click', startGame);
 
@@ -67,12 +63,14 @@ function getNewQuestion() {
 
     //iterates question counter by 1. 
     questionCounter++
+    let progressText = document.getElementById('progressText');
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     
     // randomizes questions
     let questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
-    question.innerText = currentQuestion.question
+    let QUESTION = document.getElementById('question');
+    QUESTION.innerText = currentQuestion.question
 
    //loops through choices array to show question
     for (let choice of choices) {
@@ -99,6 +97,7 @@ for (let choice of choices) {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
         if(classToApply === 'correct') {
+            let POINTS_GAIN = 100;
             incrementScore(POINTS_GAIN)
         }
 
@@ -114,6 +113,7 @@ for (let choice of choices) {
 }  
 
 function incrementScore(num) {
+    let scoreText = document.getElementById('score');
     score +=num
     scoreText.innerText = score
 }
@@ -130,6 +130,7 @@ function showResults () {
  * reset user's score to 0 when game is restarted
  */
 function resetScore() {
+    let scoreText = document.getElementById('score');
     score = 0;
     scoreText.innerText = 0;
 }
