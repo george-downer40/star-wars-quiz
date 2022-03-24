@@ -112,8 +112,8 @@ function startGame() {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    getNewQuestion()
-};
+    getNewQuestion();
+}
 
 /**
  * shows the question and runs showResults function once all questions have
@@ -126,20 +126,20 @@ function getNewQuestion() {
     }
 
     //iterates question counter by 1. 
-    questionCounter++
+    questionCounter++;
     let progressText = document.getElementById('progressText');
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     
     // randomizes questions
-    let questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-    currentQuestion = availableQuestions[questionsIndex]
+    let questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionsIndex];
     let QUESTION = document.getElementById('question');
-    QUESTION.innerText = currentQuestion.question
+    QUESTION.innerText = currentQuestion.question;
 
    //loops through choices array to show question
     for (let choice of CHOICES) {
-        let number = choice.dataset['number']
-        choice.innerText = currentQuestion['choice' + number]
+        let number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
     }
 
 //removes used questions
@@ -151,35 +151,34 @@ function getNewQuestion() {
 
 //loops through choices array and if correct, increase points by 100
 for (let choice of CHOICES) {
-    choice.addEventListener('click', checkAnswer)
+    choice.addEventListener('click', checkAnswer);
 }
 
 /**
  * checks if the answer is correct and applies the class correct or incorrect based on result
  */
 function checkAnswer(event) {
-    if(!acceptingAnswers) return
+    if(!acceptingAnswers) return;
 
-    acceptingAnswers = false
-    let selectedChoice = event.target
-    let selectedAnswer = selectedChoice.dataset['number']
+    acceptingAnswers = false;
+    let selectedChoice = event.target;
+    let selectedAnswer = selectedChoice.dataset['number'];
 
-    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
     if(classToApply === 'correct') {
         const POINTS_GAIN = 100;
-        incrementScore(POINTS_GAIN)
+        incrementScore(POINTS_GAIN);
     }
 
-    selectedChoice.parentElement.classList.add(classToApply)
+    selectedChoice.parentElement.classList.add(classToApply);
 
     //delays the next question
     setTimeout( function() {
-        selectedChoice.parentElement.classList.remove(classToApply)
-        getNewQuestion()
+        selectedChoice.parentElement.classList.remove(classToApply);
+        getNewQuestion();
 
-    }, 1000)
-
+    }, 1000);
 }
 
 /**
@@ -187,20 +186,19 @@ function checkAnswer(event) {
  */
 function incrementScore(num) {
     let scoreText = document.getElementById('score');
-    score +=num
-    scoreText.innerText = score
+    score +=num;
+    scoreText.innerText = score;
 }
 
 /**
  * hides quiz and takes user to results page
  */
 function showResults () {
-    let scoreSummary = document.getElementById('score-summary')
+    let scoreSummary = document.getElementById('score-summary');
     scoreSummary.innerText =`You scored ${score} points`;
     GAME_CONTAINER.classList.add('hide');
     RESTART_BUTTON.classList.remove('hide');
     RESTART_BUTTON.addEventListener('click', restartQuiz);
-    console.log(score);
 }
 
 /**
@@ -219,7 +217,6 @@ function restartQuiz() {
     START_BUTTON.classList.remove('hide');
     RESTART_BUTTON.classList.add('hide');
     resetScore();
-    console.log('test');
 }
 
 
