@@ -139,6 +139,8 @@ function incrementScore(num) {
  * hides quiz and takes user to results page
  */
 function showResults () {
+    let scoreSummary = document.getElementById('score-summary')
+    scoreSummary.innerText =`You scored ${score} points`;
     GAME_CONTAINER.classList.add('hide');
     RESTART_BUTTON.classList.remove('hide');
     RESTART_BUTTON.addEventListener('click', restartQuiz);
