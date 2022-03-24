@@ -93,17 +93,17 @@ body {
 }
 
 .correct {
-  background: green;
+  background: rgb(27, 197, 27);
 }
 
 .incorrect {
-  background: red;
+  background: rgb(255, 0, 0);
 }
 
 #hud {
   display: flex;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 5rem;
 }
 
