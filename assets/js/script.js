@@ -1,8 +1,8 @@
 window.addEventListener('load', restartQuiz);
 
 
-const START_BUTTON = document.getElementById('start-btn');
-const RESTART_BUTTON =document.getElementById('restart-btn');
+const START_BUTTON = document.getElementById('start-container');
+const RESTART_BUTTON =document.getElementById('results-container');
 const GAME_CONTAINER = document.getElementById('game');
 const MAX_QUESTIONS = 3;
 const CHOICES = document.querySelectorAll('.choice-text');

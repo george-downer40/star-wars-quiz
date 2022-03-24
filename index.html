@@ -12,11 +12,13 @@
 </head>
 <body>
 <div class="container">
-    <div class="navigation">
-        <!--<h1> Star Wars Quiz</h1>-->
+
+    <div id="start-container">
+        <h1>The Ultimate Jedi Quiz</h1>
+        <h2>Do you know your Ahsoka from your Anakin?</h2>
         <button id="start-btn" class="start-btn">Start</button>
-        <button id="restart-btn" class="restart-btn hide">Restart</button>
     </div>
+
     <div id="game" class="hide">
         <div id="hud">
             <div class="hud-item">
@@ -46,6 +48,12 @@
         <div class="choice-container">
             <p class="choice-text" data-number="4">Answer 4</p>
         </div>      
+    </div>
+
+    <div id="results-container" class="hide">
+        <h1>You scored ... points</h1>
+        <h2>"Do or do not. There is no try" - Master Yoda</h2>
+        <button id="restart-btn" class="restart-btn">Restart</button>
     </div>
 </div>
 
