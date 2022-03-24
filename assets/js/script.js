@@ -122,7 +122,7 @@ function checkAnswer(event) {
         selectedChoice.parentElement.classList.remove(classToApply)
         getNewQuestion()
 
-    }, 500)
+    }, 1000)
 
 }
 
