@@ -77,19 +77,30 @@ I encountered a frustrating bug when applying css classes to some of my html ele
 
 ## Deployment
 
-SAME AS LAST PROJECT? CHECK
+* Go to your github repo page
+* select the correct repo for this site
+* select setting on the repo page
+* ensure branch main is selected
+* Click save & wait for Github to publish and provide a link to the live site
 
 ## Credits
 
-*Include WebDevSimplified tutorial
-*Include Brian Design tutorial
-*Include Florin Pop tutorial
-*Include James Q Quick
-*If end up using the waiting for DOM elements to load from Love Maths tutorial, include it here
-*Stack Overflow
-*Student projects in Slack channel Project Portfolio 2 for inspiration
-*WebDevSimplified Arrow Functions tutorial
-*Object spread tutorial (find video used)
+I used quite a few tutorials on YouTube in order to understand how to structure my quiz and also get an understanding of the logic and workflow. I have included links to those tutorials below:
+
+* WebDevSimplified tutorial: [YouTube Video](https://www.youtube.com/watch?v=riDzcEQbX6k)
+
+* Brian Design tutorial: [YouTube Video](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
+
+* Florin Pop tutorial: [YouTube Video](https://www.youtube.com/watch?v=dtKciwk_si4)
+
+* James Q Quick series of tutorials: [YouTube Playlist](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx)
+
+* Stack Overflow for the times when I couldn't understand for loops
+
+* The projects shared by fellow students in Slack for inspiration
+
+* My mentor Rohit for suggesting I use `window.onload` and providing documentation on how to use it with an event listener
 
 ### Media
-If you used the Star Wars images in results, make sure to credit where they're from here
+
+No external media or images were used.
