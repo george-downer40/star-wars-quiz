@@ -6,7 +6,7 @@
 
 I chose to create a JavaScript quiz for my second Milestone project. The quiz is based around Star Wars and is intended to be a simple but enjoyable quiz that someone can play as an escape from their routine day, or if they want to challenge their knowledge of Star Wars. The questions are a mix of simple questions that could be answered by anyone with a passing knowledge of Star Wars and some more difficult questions to create a sense of challenge and encourage users to play again to improve their score.
 
-![am i responsive](/assets/images/am-i-responsive.PNGimages"examples of quiz running on multiple devices")
+![am i responsive](/assets/images/am-i-responsive.PNGimages "examples of quiz running on multiple devices")
 
 ## User Stories
 PLACEHOLDER
