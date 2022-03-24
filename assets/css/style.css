@@ -96,6 +96,7 @@ button:hover {
 
 .choice-container:hover {
   transform: scale(1.07);
+  cursor: pointer;
 }
 
 .choice-text {
