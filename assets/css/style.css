@@ -22,6 +22,19 @@ body {
     align-items: center;
   }
 
+  button {
+    text-align: center;
+    background-color: blueviolet;
+    color: rgb(185, 18, 18);
+    font-size: 3rem;
+    border: 0.5rem solid rgb(214, 236, 11);
+  }
+
+  button:hover {
+    box-shadow: 0 0.5rem 1rem 0 rgb(185, 18, 18)
+
+  }
+
 .hud-item {
     text-align: center;
 }
@@ -45,8 +58,8 @@ body {
 .container {
   background-color: bisque;
   width: 100vh;
-  height: 80vh;
-  max-width: 80%;
+  height: 100vh;
+  max-width: 80rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
