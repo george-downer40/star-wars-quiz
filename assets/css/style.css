@@ -48,6 +48,11 @@ body {
     text-align: center;
     margin: 2rem;
     padding: 0.5rem;
+    border-radius: 15px;
+}
+
+.choice-container:hover {
+  transform: scale(1.07);
 }
 
 .choice-text {
