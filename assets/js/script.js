@@ -4,7 +4,7 @@ window.addEventListener('load', restartQuiz);
 const START_BUTTON = document.getElementById('start-container');
 const RESTART_BUTTON =document.getElementById('results-container');
 const GAME_CONTAINER = document.getElementById('game');
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 10;
 const CHOICES = document.querySelectorAll('.choice-text');
 
 
@@ -21,26 +21,82 @@ let questions = [
     {
         question: 'Who destroyed the first Death Star?',
         choice1: 'Luke Skywalker',
-        choice2: 'Wrong',
-        choice3: 'Wrong',
-        choice4: 'Wrong',
+        choice2: 'Ki-Adi-Mundi',
+        choice3: 'Mace Windu',
+        choice4: 'Obi-Wan Kenobi',
         answer: 1,
     },
     {
         question: 'Who dueled Darth Sidious in the Senate on Coruscant?',
-        choice1: 'Wrong',
-        choice2: 'Yodaaaaaa',
-        choice3: 'Wrong',
-        choice4: 'Wrong',
+        choice1: 'Anakin Skywalker',
+        choice2: 'Yoda',
+        choice3: 'Sifo-Dyas',
+        choice4: 'Mace Windu',
         answer: 2,
     },
     {
         question: 'Who was the apprentice of Qui-Gon Jinn?',
-        choice1: 'WroSSSSng',
-        choice2: 'Wrong',
-        choice3: 'Obi-Wan Kenooooobi',
-        choice4: 'Wrong',
+        choice1: 'Anakin Skywalker',
+        choice2: 'Ahsoka Tano',
+        choice3: 'Obi-Wan Kenobi',
+        choice4: 'Grogu',
         answer: 3,
+    },
+    {
+        question: 'What is the real name of Baby Yoda?',
+        choice1: 'Ki-Adi-Mundi',
+        choice2: 'Mace Windu',
+        choice3: 'Qui-Gon Jinn',
+        choice4: 'Grogu',
+        answer: 4,
+    },
+    {
+        question: 'Who wielded a purple lightsaber?',
+        choice1: 'Mace Windu',
+        choice2: 'Luke Skywalker',
+        choice3: 'Sifo-Dyas',
+        choice4: 'Yoda',
+        answer: 1,
+    },
+    {
+        question: 'Who was the apprentice of Anakin Skywalker?',
+        choice1: 'Ahsoka Tano',
+        choice2: 'Grogu',
+        choice3: 'Ki-Adi Mundi',
+        choice4: 'Qui-Gon Jinn',
+        answer: 1,
+    },
+    {
+        question: 'Which Jedi had a binary brain?',
+        choice1: 'Grogu',
+        choice2: 'Luke Skywalker',
+        choice3: 'Ki-Adi-Mundi',
+        choice4: 'Obi-Wan Kenobi',
+        answer: 3,
+    },
+    {
+        question: 'Which Jedi was prophesised to bring balance to the Force?',
+        choice1: 'Luke Skywalker',
+        choice2: 'Yoda',
+        choice3: 'Qui-Gon Jinn',
+        choice4: 'Anakin Skywalker',
+        answer: 4,
+    },
+    {
+        question: 'Who was killed by Darth Maul on Naboo?',
+        choice1: 'Ki-Adi-Mundi',
+        choice2: 'Qui-Gon Jinn',
+        choice3: 'Sifo-Dyas',
+        choice4: 'Obi-Wan Kenobi',
+        answer: 2,
+    },
+    {
+        question: 'Which Jedi commissioned the creation of the clone army?',
+        choice1: 'Ahsoka Tano',
+        choice2: 'Yoda',
+        choice3: 'Mace Windu',
+        choice4: 'Sifo-Dyas',
+        answer: 4,
     },
 ];
 
